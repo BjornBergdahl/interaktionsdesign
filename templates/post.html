@@ -1,0 +1,101 @@
+<!-- templates/post.html -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Botniabladet</title>		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	
+		<!-- CSS -->
+		<!-- Bör flyttas till separat .CSS fil -->
+		<!-- .center: Centrering av element -->
+		<!-- button: Ladda upp knapp till höger -->
+		<!-- debug: Använd för att dubbelkolla omfattning av divar / containers -->
+		<style>
+			.center {
+				display: block;
+				margin: auto;
+				width: 50%;
+				padding: 10px;
+			}
+			
+			button[type=submit] {
+				float:right;
+			}
+			
+			.debug {
+				border: 1px solid green;
+			}
+		</style>
+		
+		<!-- JS funktionalitet som är kopplat med Bootstrap -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	</head>
+  
+  <body>
+  <!-- NAVBAR -->
+  <!-- Behöver uppdateras för funktionalitet -->
+    <div class="navbar debug">
+      <a class="navbar-brand" href="#">Botniabladet</a>
+      <div class="row mr">
+          <p>Inloggad som fNamn eNamn</p>
+        <div class="col-md">
+          <button class="btn btn-danger" type="button" name="button">Logga ut</button>
+        </div>
+      </div>
+    </div>
+	
+	<!-- MAIN CONTENT CONTAINER -->
+    <div class="container center">
+	
+		<!-- IMAGE PLACEHOLDER / TUMNÅL / FÖRHANDSVISNING -->
+		<!-- ** Bör ändras från hårdkodad till att visa bild som håller på att laddas upp ** -->
+		<!-- ** EDIT: Efter närmare undersökning verkar det som detta kräver bl.a. JS ** -->
+		<div class="container center">
+			<img class="center" height="50%" width="50%" src="https://cdn1.iconfinder.com/data/icons/image-manipulations/100/13-512.png" alt="Ladda upp bilden här">
+		</div>
+		
+		<!-- FORM CONTAINER -->
+		<div class="container center debug">
+			<form method="post" enctype="multipart/form-data">
+				{% csrf_token %}
+				<div class="col-lg-12">
+						<input  type="file" name="cover" accept="image/*" required id="id_cover">
+				</div>
+				<br>
+				<!-- LÄGG TILL KATEGORI / LÄGG TILL TAGG -->
+				<!-- ** Behöver skrivas om för att hanteras med django ** -->
+				<div class="container">
+					<div class="row">
+					  <div class="col-lg-6">
+						<button type="button" class="" name="button">Lägg till Kategori</button>
+						<p></p>
+						<p>Kategori</p>
+						<p>Underkategori</p>
+					  </div>
+					  <div class="col-lg-6">
+						<button type="button" class="" name="button">Lägg till Taggar</button>
+						<p></p>
+						<p><a href="#"><u>#tagname</u></a></p>
+						<p><a href="#"><u>#tagname</u></a></p>
+						<p><a href="#"><u>#tagname</u></a></p>
+					  </div>
+					</div>
+				</div>
+				<br>	
+				<br>	
+				
+				
+				<!-- Input knapp för text utifall du vill testa att HTML fungerar och har genomfört Vincents Image Upload guide (modellen kräver titel) -->
+				<input type="text" name="title" value="Test" class="vTextField" maxlength="24" required="" id="id_title">
+				
+				<button type="submit" class="">Ladda upp</button>
+			</form>
+		</div>
+    </div>
+  </body>
+</html>
+
+

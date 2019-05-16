@@ -1,3 +1,9 @@
 from django.shortcuts import render
 
-# Create your views here.
+from django.views.generic import ListView
+from .models import Photo
+
+
+class HomePageView(ListView):
+    model = Photo
+    template_name = 'home.html'

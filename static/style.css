@@ -1,0 +1,21 @@
+/*
+
+.center {
+	display: block;
+	margin: auto;
+	width: 50%;
+	padding: 10px;
+}
+
+button[type=submit] {
+	float:right;
+}
+*/
+
+.debug {
+	border: 1px solid green;
+}
+
+.upload-button {
+	/*background-color: red;*/
+}

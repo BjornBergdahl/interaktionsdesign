@@ -40,7 +40,7 @@
 				<form method="post" enctype="multipart/form-data">
 					{% csrf_token %}
 					<div class="col-lg-12">
-						<input type="file" name="image" accept="image/*" required id="id_image">
+						<input type="file" name="image" accept="image/*" required id="id_image" class="upload-button">
 					</div>
 
 					<!-- LÄGG TILL KATEGORI / LÄGG TILL TAGG -->
@@ -48,12 +48,12 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-6">
-								<button type="button" class="" name="button">Lägg till Kategori</button>
+								<button type="button" class="btn btn-primary" name="button">Lägg till Kategori</button>
 								<p>Kategori</p>
 								<p>Underkategori</p>
 							</div>
 							<div class="col-lg-6">
-								<button type="button" class="" name="button">Lägg till Taggar</button>
+								<button type="button" class="btn btn-primary" name="button">Lägg till Taggar</button>
 								<p><a href="#"><u>#tagname</u></a></p>
 								<p><a href="#"><u>#tagname</u></a></p>
 								<p><a href="#"><u>#tagname</u></a></p>
@@ -62,7 +62,7 @@
 					</div>
 					
 					<input type="text" name="title" value="Test" class="vTextField" maxlength="24" required="" id="id_title">
-					<button type="submit" class="">Ladda upp</button>
+					<button type="submit" class="btn btn-primary">Ladda upp</button>
 				</form>
 			</div>
 

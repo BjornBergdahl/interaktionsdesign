@@ -13,6 +13,9 @@ button[type=submit] {
 */
 
 .debug {
-	/* border: 1px solid green; */
+	border: 1px solid green;
 }
 
+.upload-button {
+	/*background-color: red;*/
+}

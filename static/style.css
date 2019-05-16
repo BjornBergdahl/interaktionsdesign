@@ -1,3 +1,5 @@
+/*
+
 .center {
 	display: block;
 	margin: auto;
@@ -8,8 +10,9 @@
 button[type=submit] {
 	float:right;
 }
+*/
 
-/* debug: Använd för att dubbelkolla omfattning av divar / containers */
 .debug {
 	/* border: 1px solid green; */
 }
+

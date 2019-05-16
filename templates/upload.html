@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="utf-8">
 		<title>Botniabladet</title>		
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -16,6 +17,7 @@
 	</head>
   
  	<body>
+ 		<!-- NAVBAR -->
 		<div class="navbar debug">
 			<a class="navbar-brand" href="#">Botniabladet</a>
 			<div class="row mr">
@@ -26,19 +28,19 @@
 			</div>
 		</div>
 	
-		<!-- MAIN CONTENT CONTAINER -->
+		<!-- MAIN CONTENT -->
 	    <div class="container center">
 		
 			<div class="container center">
 				<img class="center" height="50%" width="50%" src="https://cdn1.iconfinder.com/data/icons/image-manipulations/100/13-512.png" alt="Ladda upp bilden här">
 			</div>
 			
-			<!-- FORM CONTAINER -->
+			<!-- FORM -->
 			<div class="container center debug">
 				<form method="post" enctype="multipart/form-data">
 					{% csrf_token %}
 					<div class="col-lg-12">
-						<input  type="file" name="image" accept="image/*" required id="id_image">
+						<input type="file" name="image" accept="image/*" required id="id_image">
 					</div>
 
 					<!-- LÄGG TILL KATEGORI / LÄGG TILL TAGG -->
@@ -63,6 +65,7 @@
 					<button type="submit" class="">Ladda upp</button>
 				</form>
 			</div>
+
 	    </div>
   	</body>
 </html>
